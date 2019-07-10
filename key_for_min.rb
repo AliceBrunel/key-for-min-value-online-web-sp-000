@@ -1,21 +1,16 @@
 # prereqs: iterators, hashes, conditional logic
 # Given a hash with numeric values, return the key for the smallest value
 
-def key_for_min_value(name_hash)
-array = []
-  name_hash.collect do |x|
-  puts "#{x[1]}"
-  array << x[1]
+def order_from_min_value(name_hash)
+  
+  name_hash.sort do |a, b|
+    if a[1] == b[1]
+      0
+    elsif a[1] < b[1]
+      -1
+    elsif a[1] > b[1]
+      1
+    end
   end
-array
-array.sort do |a, b|
-  if a == b
-    0
-  elsif a < b
-    -1
-    
-  elsif a > b
-    1
-  end
-end
+
 end
