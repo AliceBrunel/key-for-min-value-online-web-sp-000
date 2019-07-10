@@ -18,4 +18,6 @@ array.sort do |a, b|
     1
   end
 end
+value = array[0]
+name_hash.key(value)
 end
