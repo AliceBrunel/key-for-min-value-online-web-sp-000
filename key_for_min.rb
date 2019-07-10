@@ -7,17 +7,7 @@ array = []
   puts "#{x[1]} : #{x[0]}"
   array << x[1]
   end
-array
-array.sort do |a, b|
-  if a == b
-    0
-  elsif a < b
-    -1
-    
-  elsif a > b
-    1
-  end
-end
-value = array[0]
-name_hash.key(value)
+  sorted_array = array.sort{|a, b| a <=> b}
+  value = sorted_array[0]
+  name_hash.key(value)
 end
